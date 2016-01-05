@@ -1,0 +1,12 @@
+{
+    "name": "root/automated-git-commit",
+    "require": {
+        "cpliakas/git-wrapper": "^1.6"
+    },
+    "authors": [
+        {
+            "name": "iannoyes",
+            "email": "iannoyesdev@gmail.com"
+        }
+    ]
+}
