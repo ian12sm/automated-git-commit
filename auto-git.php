@@ -1,4 +1,5 @@
 <?php
+
 use GitWrapper\GitWrapper;
 	/* This program uses the the git wrapper found at https://github.com/cpliakas/git-wrapper */
 
@@ -40,14 +41,17 @@ use GitWrapper\GitWrapper;
 					$copy = $wrapper->workingCopy($dir);
 
 					if ($copy->hasChanges()) {
-						echo $dir . " Has Ch-Ch-Ch-Ch-Ch-Changes!";
-						echo "\n";
+					
+						$status = $wrapper->git('--git-dir=' . $dir .'/.git --work-tree=' . $dir . ' status');
+					
+						print_r($status);
+
 					} else {
 						echo $dir . " Does not have changes!";
 						echo "\n";
 					}
 
-				$status = $wrapper->git('--git-dir=' . $dir .'/.git --work-tree=' . $dir . ' status');
+				//$status = $wrapper->git('--git-dir=' . $dir .'/.git --work-tree=' . $dir . ' status');
 
 			}
 
