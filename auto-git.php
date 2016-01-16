@@ -1,10 +1,14 @@
 <?php
-
-use GitWrapper\GitWrapper;
 	/* This program uses the the git wrapper found at https://github.com/cpliakas/git-wrapper */
 
 	//get dependencies
 	require_once __DIR__ . '/vendor/autoload.php';
+
+	//use libraries
+	use GitWrapper\GitWrapper;
+	use GitWrapper\Event\GitLoggerListener;
+	use Monolog\Logger;
+	use Monolog\Handler\StreamHandler;
 
 	//include our config file
 	include 'config.php';
