@@ -2,7 +2,8 @@
     "name": "root/automated-git-commit",
     "require": {
         "cpliakas/git-wrapper": "^1.6",
-        "monolog/monolog": "^1.17"
+        "monolog/monolog": "^1.17",
+        "mailgun/mailgun-php": "~1.7.2"
     },
     "authors": [
         {
